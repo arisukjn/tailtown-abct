@@ -1,0 +1,8 @@
+On Visual Studio Code Terminal (Ctrl + `), run...
+
+flutter pub get
+
+... to update dependencies for pubspec.yaml
+then you can now run...
+
+flutter run
