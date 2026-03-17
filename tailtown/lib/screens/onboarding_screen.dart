@@ -62,7 +62,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             children: [
               // Back button
               Padding(
-                padding: const EdgeInsets.only(left: 16, top: 8),
+                padding: const EdgeInsets.only(left: 30, top: 30),
                 child: IconButton(
                   icon: const Icon(Icons.arrow_back,
                       color: AppColors.textDark, size: 26),
@@ -78,22 +78,25 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
               const SizedBox(height: 24),
 
+              const Spacer(flex: 1),
+
               // Title
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 28),
-                child: Text(
-                  page.title,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.textDark,
-                    height: 1.5,
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 8),
+                  child: Text(
+                    page.title,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.textDark,
+                      height: 1.5,
+                    ),
                   ),
                 ),
               ),
 
-              const Spacer(flex: 1),
 
               // Illustration
               Center(
@@ -105,20 +108,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
 
-              const Spacer(flex: 1),
 
               // Subtitle
               if (page.subtitle.isNotEmpty)
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 28),
-                  child: Text(
-                    page.subtitle,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                      color: AppColors.textDark,
-                      height: 1.5,
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 8),
+                    child: Text(
+                      page.subtitle,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.textDark,
+                        height: 1.5,
+                      ),
                     ),
                   ),
                 ),

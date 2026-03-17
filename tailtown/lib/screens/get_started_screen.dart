@@ -98,7 +98,7 @@ class GetStartedScreen extends StatelessWidget {
                   children: [
                     // Get Started button
                     SizedBox(
-                      width: double.infinity,
+                      width: 250,
                       height: 54,
                       child: ElevatedButton(
                         onPressed: () {

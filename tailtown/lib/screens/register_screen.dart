@@ -44,21 +44,25 @@ class _RegisterScreenState extends State<RegisterScreen> {
         child: SafeArea(
           child: Column(
             children: [
+
+              // Back button
+              Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 30, top: 30),
+                  child: IconButton(
+                    icon: const Icon(Icons.arrow_back,
+                        color: AppColors.textDark, size: 26),
+                    onPressed: () => Navigator.pop(context),
+                  ),
+                ),
+              ),
+
               // Header area
               Expanded(
                 flex: 2,
                 child: Stack(
                   children: [
-                    // Back button
-                    Positioned(
-                      left: 8,
-                      top: 4,
-                      child: IconButton(
-                        icon: const Icon(Icons.arrow_back,
-                            color: AppColors.textDark, size: 26),
-                        onPressed: () => Navigator.pop(context),
-                      ),
-                    ),
 
                     // Top content
                     Column(
@@ -73,7 +77,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                         const SizedBox(height: 14),
                         const Text(
-                          'Start register now and\njoin out Pet Community!',
+                          'Start register now and\njoin our Pet Community!',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 20,
@@ -88,15 +92,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
 
+
               // Form card (scrollable)
               Expanded(
-                flex: 5,
+                flex: 4,
                 child: Container(
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     color: Color(0xFFCCE6F5),
                     borderRadius: BorderRadius.vertical(top: Radius.circular(32)),
                   ),
+                  child: Scrollbar(
+                    thickness: 5,
+                    radius: const Radius.circular(8),
                   child: SingleChildScrollView(
                     padding: const EdgeInsets.fromLTRB(24, 28, 24, 32),
                     child: Column(
@@ -235,6 +243,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                       ],
                     ),
+                  ),
                   ),
                 ),
               ),
